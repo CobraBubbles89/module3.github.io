@@ -47,9 +47,12 @@
 }
 .catalog__content {
     margin-top: 60px;
-    display: flex;
+    display: none;
     justify-content: space-between;
     flex-wrap: wrap;
+    &_active {
+        display: flex;
+    }
 }
 .catalog-item {
     width: 300px;
