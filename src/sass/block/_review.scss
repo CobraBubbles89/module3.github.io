@@ -1,0 +1,43 @@
+.review {
+    min-height: 920px;
+    padding: 0 5px 50px 0;
+    &__items {
+        display: flex;
+    }
+    img {
+        width: 169px;
+        height: 169px
+    }
+    &__items {
+        margin-top: 60px;
+    }
+    &__text {
+        margin-left: 60px;
+    }
+    &__text_name {
+        color: #0D0D0D;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 18px;
+    }
+    &__text_stat {
+        color: #646464;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: normal;
+    }
+    &__text_main {
+        color: #0D0D0D;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 24px;
+    }
+}
+.title {
+    color: #0D0D0D;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+}

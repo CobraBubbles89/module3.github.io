@@ -1,9 +1,10 @@
 .catalog {
-    padding-bottom: 100px;
+    padding-bottom: 80px;
     &__tabs {
         margin-top: 70px;
         list-style-type: none;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         margin-bottom: 0;
         padding-left: 0;
@@ -19,7 +20,7 @@
         line-height: 48px;
         text-transform: uppercase;
         transform: skewX(-25deg);
-        margin: 0 5px;
+        margin: 5px 5px;
         cursor: pointer;
         transition: 0.3s all;
         &:hover {
@@ -46,7 +47,7 @@
     }
 }
 .catalog__content {
-    margin-top: 60px;
+    margin-top: 55px;
     display: none;
     justify-content: space-between;
     flex-wrap: wrap;
