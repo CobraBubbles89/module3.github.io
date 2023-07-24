@@ -9,22 +9,50 @@
     font-size: 12px;
     font-weight: 500;
     text-transform: uppercase;
+    &:hover {
+        color: #fff;
+        background-color: rgb(185, 24, 18);
+        box-shadow: 3px 3px 0 0 #C70101;
+        box-shadow: 0 0 5px 5px #C70101;
+        transition: 0.5s all;
+        }
     &__main {
         margin-top: 67px;
         width: 300px;
         height: 50px;
         font-size: 16px;
+        &:hover {
+            color: #fff;
+            background-color: rgb(185, 24, 18);
+            box-shadow: 3px 3px 0 0 #C70101;
+            box-shadow: 0 0 5px 5px #C70101;
+            transition: 0.5s all;
+            }
     }
     &__submit {
         width: 100%;
         height: 55px;
         color:#FFF;
         font-size: 16px;
+        &:hover {
+            color: #fff;
+            background-color: rgb(185, 24, 18);
+            box-shadow: 3px 3px 0 0 #C70101;
+            box-shadow: 0 0 5px 5px #C70101;
+            transition: 0.5s all;
+            }
     }
     &_mini {
         width: 135px;
         height: 44px;
         font-size: 14px;
+        &:hover {
+            color: #fff;
+            background-color: rgb(185, 24, 18);
+            box-shadow: 3px 3px 0 0 #C70101;
+            box-shadow: 0 0 5px 5px #C70101;
+            transition: 0.5s all;
+            }
     }
 }
 

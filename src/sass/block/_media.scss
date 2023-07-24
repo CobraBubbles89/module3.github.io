@@ -146,6 +146,24 @@
     }
     }
 }
-        
+
+@media (max-width: 500px) {
+    .modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-height: 400px;
+        &__close {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-size: 40px;
+            color: #C70101;
+            line-height: 20px;
+            cursor: pointer;
+        }
+    }
+}     
 
 
