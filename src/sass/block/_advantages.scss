@@ -40,6 +40,17 @@
             line-height: 18px;
             text-decoration-line: underline;
         }
-
     }
+.advantages__icon__anime {
+    animation: heartbeat 1s infinite ease;
+    // animation-name: heartbeat;
+    // animation-duration: 2s;
+    // animation-iteration-count: infinite;
+    // animation-timing-function: ease;
+    &:hover {
+        animation-play-state: paused;
+    }
+}
+
+    
 }

@@ -71,6 +71,93 @@ $(document).ready(function () {
       $('.overlay, #order').fadeIn();
     })
   });
+
+  // $('.feed_form').validate();
+
+//   $('#consultation form').validate({
+//     rules: {
+//       name: "required",
+//       phone: "required",
+//       email: {
+//         required: true,
+//         email: true
+//       }
+//     },
+//     messages: {
+//       name: "Please specify your name",
+//       phone: "Call number",
+//       email: {
+//       required: "Please specify your name",
+//       email: "Your email address must be in the format of name@test.com"
+//     }
+//   }
+// });
+//   $('#order form').validate();
+//   $('#consultation-form').validate();
+
+  function valideForms(form) {
+      $(form).validate({
+    rules: {
+          name: {
+            required: true,
+            minlength: 2
+          },
+      phone: "required",
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      name: {
+        required: "Пожалуйста, введите своё имя",
+        minlength: jQuery.validator.format("введите {0} символа!")
+      },
+      phone: "Пожалуйста, введите свой номер телефона",
+      email: {
+        required: "Пожалуйста, введите свою почту",
+        email: "Неправильно введён адрес почты"
+      }
+    }
+  });
+};
   
+  valideForms('#consultation-form');
+  valideForms('#consultation form');
+  valideForms('#order form');
+
+  $('input[name=phone]').mask("+38 (999) 99-99-999");
+
+  $('form').submit(function(e) {
+    e.preventDefault();
+
+    if (!$(this).valid()) {
+      return;
+    }
+
+    $.ajax({
+      type: "POST",
+      url: "mailer/smart.php",
+      data: $(this).serialize()
+    }).done(function () {
+      $(this).find("input").val("");
+
+      $('form').trigger('reset');
+    });
+    return false;
+  });
+
+  // smooth scroll up
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 1600) {
+      $('.pageup').fadeIn();
+    } else {
+      $('.pageup').fadeOut();
+    }
+  });
+
+  new WOW().init();
+
 });
 

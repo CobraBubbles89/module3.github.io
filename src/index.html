@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.min.css">
 
 
 </head>
 
 <body>
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="container">
             <div class="header">
                 <a href="#" class="header__logo">
@@ -68,7 +69,7 @@
                     полумарафоны, переплыли Босфор, готовятся к соревнованиям по триатлону!</p>
             </div>
             <div class="advantages__icon">
-                <img src="images/icons/heart.png" alt="heart">
+                <img src="images/icons/heart.png" alt="heart" class="advantages__icon__anime">
                 <h4>Заботимся о здоровье</h4>
                 <p>Мы работаем для того, чтобы Ваши занятия спортом шли на пользу Вашему здоровью 
                 и были в радость Вам и Вашим близким!</p>
@@ -92,10 +93,10 @@
                 Просто заполните форму заявки<br> и мы перезвоним вам в течении 10 минут
             </div>
             <div class="consultation__form">
-            <form class="feed_form" action="#">
-                <input name="name" required placeholder="Ваше имя" type="text">
-                <input name="phone" required placeholder="Ваш телефон" type="number">
-                <input name="email" required placeholder="Ваш E-mail" type="email">
+            <form id="consultation-form" class="feed_form" action="#">
+                <input name="name" placeholder="Ваше имя" type="text">
+                <input name="phone" placeholder="Ваш телефон">
+                <input name="email" placeholder="Ваш E-mail" type="email">
                 <button class="button button__submit">заказать консультацию</button>
                 <!-- <input type="reset"> -->
                 <!-- <textarea style="resize: none" name="" id="" cols="30" rows="10"></textarea> -->
@@ -367,7 +368,7 @@
         <div class="container">
             <div class="title">отзывы клиентов</div>
             <div class="review__wrapper">
-                <div class="review__items">
+                <div class="review__items animate__animated review__items__anime wow" data-wow-delay="0s">
                     <img src="images/icons/photo_1.png" alt="review_img1">
                     <div class="review__text">
                         <h2 class="review__text_name">Ирина Иванченко</h2>
@@ -379,7 +380,7 @@
                         <br><br> Спасибо, RunSmart!</p>
                     </div>
                 </div>
-                <div class="review__items">
+                <div class="review__items animate__animated review__items__anime wow" data-wow-delay="0.2s">
                     <img src="images/icons/photo_2.png" alt="review_img2">
                     <div class="review__text">
                         <h2 class="review__text_name">Иван Сёмочкин</h2>
@@ -391,13 +392,12 @@
                         </p>
                     </div>
                 </div>
-                <div class="review__items">
+                <div class="review__items animate__animated review__items__anime wow" data-wow-delay="0.4s">
                     <img src="images/icons/photo_3.png" alt="review_img3">
                     <div class="review__text">
                         <h2 class="review__text_name">Юлия Дашкина</h2>
                         <h3 class="review__text_stat">2 полумарафона</h3>
-                        <p class="review__text_main">Долго не могла начать бегать, т.к. до этого несколько раз начинала, 
-                        но становилось тяжело и я бросала. От друзей
+                        <p class="review__text_main">Долго не могла начать бегать, т.к. до этого несколько раз начинала, но становилось тяжело и я бросала. От друзей
                         услышала о RunSmart и о беге с контролем пульса и решила попробовать. <br><br>
                         Позвонила, ребята поинтересовались моими целями и подобрали очень интересный вариант 
                         со скидкой! Теперь бегаю и наслаждаюсь бегом! Пробежала уже 2 полумарафона и
@@ -433,7 +433,7 @@
             <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
             <form class="feed_form feed_form_mt25" action="#">
                 <input name="name" required placeholder="Ваше имя" type="text">
-                <input name="phone" required placeholder="Ваш телефон" type="number">
+                <input name="phone" required placeholder="Ваш телефон">
                 <input name="email" required placeholder="Ваш E-mail" type="email">
                 <button class="button button__submit">заказать консультацию</button>
             </form>
@@ -444,8 +444,10 @@
             <div class="modal__subtitle">Ваш заказ</div>
             <div class="modal__descr">Пульсометр Polar FT1</div>
             <form class="feed_form feed_form_mt25" action="#">
+                <!--required min/maxlength -->
+                <!-- jquery validate -->
                 <input name="name" required placeholder="Ваше имя" type="text">
-                <input name="phone" required placeholder="Ваш телефон" type="number">
+                <input name="phone" required placeholder="Ваш телефон">
                 <input name="email" required placeholder="Ваш E-mail" type="email">
                 <button class="button button__submit">купить</button>
             </form>
@@ -456,13 +458,24 @@
             <div class="modal__subtitle">Спасибо за Вашу заявку</div>
             <div class="modal__descr">Наш менеджер свяжется с Вами в ближайшее время!</div>
         </div>
-
     </div>
+
+    <a href="#up" class="pageup">
+        <svg xmlns="http://www.w3.org/2000/svg" height="40px" width="40px"
+            viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM385 231c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-71-71V376c0 13.3-10.7 24-24 24s-24-10.7-24-24V193.9l-71 71c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9L239 119c9.4-9.4 24.6-9.4 33.9 0L385 231z" />
+        </svg>
+        <!-- <img src="images/icons/circle-chevron-up-solid (3).svg" alt="direct_up"> -->
+    </a>
+    
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/slick.min.js"></script>
-
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 
